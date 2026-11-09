@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Data Structure Visualizer</title>
+    <link rel="stylesheet" href="stack.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Stack Visualizer</h1>
+        <p class="description">A stack follows LIFO: Last In, First Out.</p>
+
+        <div class="controls">
+            <input id="valueInput" type="text" placeholder="Enter a value" maxlength="12">
+            <button id="pushButton">Push</button>
+            <button id="popButton">Pop</button>
+            <button id="peekButton">Peek</button>
+            <button id="autoButton" class="auto-button">Start Auto Random</button>
+            <button id="clearButton" class="danger">Clear</button>
+        </div>
+
+        <section class="stack-area" aria-label="Visual representation of stack">
+            <div class="stack-wrapper">
+                <div id="stack" class="stack"></div>
+                <div id="topPointer" class="top-pointer" aria-live="polite">TOP: Empty</div>
+            </div>
+        </section>
+
+        <div class="info">
+            <span>Size: <strong id="size">0</strong></span>
+            <span>Capacity: <strong id="capacity">8</strong></span>
+        </div>
+
+        <div class="status" aria-live="polite">
+            <span id="emptyStatus" class="active">EMPTY: Yes</span>
+            <span id="fullStatus">FULL: No</span>
+            <span id="autoStatus">AUTO: Off</span>
+        </div>
+
+        <p id="message" aria-live="polite">The stack is empty.</p>
+    </main>
+
+    <script src="stack.js"></script>
+</body>
+</html>
